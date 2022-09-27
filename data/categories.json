@@ -1,0 +1,52 @@
+{
+    "categories": [{
+            "id": 0,
+            "dataFilter": "AllProduct",
+            "name": "Voir tous nos plats",
+            "category": "AllProduct",
+            "color": "#"
+        }, {
+            "id": 1,
+            "dataFilter": "Entrees",
+            "name": "Nos Entrées",
+            "category": "Entrees",
+            "color": "#"
+        },
+        {
+            "id": 2,
+            "dataFilter": "Plats",
+            "name": "Nos plats",
+            "category": "Plats",
+            "color": "#"
+        },
+        {
+            "id": 3,
+            "dataFilter": "Supplements",
+            "name": "Nos suppléments",
+            "category": "Supplements",
+            "color": "#"
+        },
+        {
+            "id": 4,
+            "dataFilter": "Patisseries",
+            "name": "Nos patisseries orientales",
+            "category": "Patisseries",
+            "color": "#"
+        },
+        {
+            "id": 5,
+            "dataFilter": "Desserts",
+            "name": "Nos desserts",
+            "category": "Desserts",
+            "color": "#"
+        },
+
+        {
+            "id": 6,
+            "dataFilter": "Boissons",
+            "name": "Nos boissons",
+            "category": "Boissons",
+            "color": "#"
+        }
+    ]
+}
