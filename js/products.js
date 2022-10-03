@@ -25,7 +25,7 @@ const swiper = new Swiper(".mySwiper", {
 
 const getCategories = async() => {
     try {
-        const results = await fetch("../data/categories.json");
+        const results = await fetch("./data/categories.json");
         const data = await results.json();
         const categories = data.categories;
         return categories;
@@ -92,7 +92,7 @@ const displayProductItems = (items) => {
                     </div>
                     <h4>${product.title}</h4>
                     <div class="price">
-                      <span>Price</span><span class="color">$${product.price}</span>
+                      <span>Prix</span><span class="color">${product.price} €</span>
                     </div>
                     <div class="button btn">Add To Cart+</div>
                   </div>
