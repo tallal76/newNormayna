@@ -113,28 +113,28 @@
 <section class="section recipes" id="recipes">
     <h2>Découvrez nos plats typiquement orientaux</h2>
     <div class="row container">
-
-        <div class="filters d-flex category-wrapper swiper-wrapper" id="category-wrapper">
-            <div class="swiper mySwiper">
-                <div class="filters d-flex">
-                    <span data-filter></span>
+        <div class="category">
+            <div class="swiper mySwiper filters d-flex">
+                <div class="swiper-wrapper filters d-flex" id="category-wrapper">
+                <span data-filter></span>
                 </div>
             </div>
+        
         </div>
-    </div>
-    <div class="products">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper" id="products-wrapper">
-
+        <div class="products">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="products-wrapper"></div>
+                <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        </div>
             </div>
-        </div>
-        <div class="pagination">
-            <div class="custom-pagination"></div>
-        </div>
-
-
-    </div>
-    </div>
+            <div class="pagination">
+                <div class="custom-pagination"></div>
+            </div>
+        </div> 
+        
+       
 </section>
 
 <!--=============== Testimonials ===============-->

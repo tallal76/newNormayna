@@ -1,25 +1,33 @@
 /* ========== Products Slider =========== */
 const swiper = new Swiper(".mySwiper", {
     grabCursor: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 4,
+    spaceBetween: 40,
+
     pagination: {
         el: ".custom-pagination",
         clickable: true,
     },
-
+    // Responsive breakpoints
     breakpoints: {
-        567: {
-            slidesPerView: 2,
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
         },
-        996: {
+        // when window width is >= 480px
+        480: {
             slidesPerView: 3,
+            spaceBetween: 30
         },
-        1200: {
+        // when window width is >= 640px
+        640: {
             slidesPerView: 4,
-        },
-    },
-});
+            spaceBetween: 40
+        }
+    }
+})
+
 
 /* ========== Fetch the Categories =========== */
 
@@ -49,6 +57,7 @@ const getProducts = async() => {
 const CategorysWrapper = document.getElementById("category-wrapper");
 const ProductsWrapper = document.getElementById("products-wrapper");
 
+
 window.addEventListener("DOMContentLoaded", async function() {
     const categories = await getCategories();
     displayCategoryItems(categories);
@@ -63,7 +72,7 @@ window.addEventListener("DOMContentLoaded", async function() {
 const displayCategoryItems = (items) => {
     let displayCategory = items.map(
         function(category) {
-            return "<span data-filter='" + category.dataFilter + "'>" + category.name + "</span>";
+            return "<span  data-filter='" + category.dataFilter + "'>" + category.name + "</span>";
         }
     );
 
@@ -91,13 +100,18 @@ const displayProductItems = (items) => {
                     <span><i class="bx bxs-star"></i></span>
                     </div>
                     <h4>${product.title}</h4>
+                    <div class="description">
+                    
+                      <p><ul><li>-
+                       ${product.description}</li></ul> </p>
+                    </div>
                     <div class="price">
                       <span>Prix</span><span class="color">${product.price} €</span>
                     </div>
-                    <div class="button btn">Add To Cart+</div>
+                    <div class="button btn">Voir la carte</div>
                   </div>
                 </div>
-                    `
+            `
     );
 
     displayProduct = displayProduct.join("");
@@ -129,25 +143,21 @@ filters.forEach((filter) => {
         });
         let menuHautCategory = categories.filter((category) => {
             if (category.category === id) {
-
                 return category;
             }
 
         });
 
-
         if (id === "AllProduct") {
             displayProductItems(products);
             displayCategoryItems(categories);
-
-
-
+            swiper.reInit();
         } else {
             displayProductItems(menuCategory);
             displayCategoryItems(menuHautCategory);
             displayCategoryItems(categories);
-
             swiper.reInit();
         }
+        swiper.reInit();
     });
 });

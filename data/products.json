@@ -2,6 +2,7 @@
     "products": [{
             "id": 1,
             "title": "Soupes Chorba ou Harira",
+            "description": "",
             "price": "3.50",
             "url": "./assets/images/Soupe-Harira.jpg",
             "category": "Entrees",
@@ -105,15 +106,17 @@
         },
         {
             "id": 14,
-            "title": "Couscous Sucré salé (Poulet, oignons confits et raisins secs)",
-            "price": "11.00",
+            "title": "Couscous Sucré salé ()",
+            "description": "Poulet, oignons confits, raisins secs",
+            "price ": "11.00 ",
             "url": "./assets/images/couscous-tfaya-sucre.jpg",
             "category": "Plats",
             "dataFilter": "Plats"
         },
         {
             "id": 15,
-            "title": "Tajine de Poulet aux olives accompagnement pomme de terre sautée",
+            "title": "Tajine de Poulet aux olives ",
+            "description": "Accompagnement pomme de terre sautée",
             "price": "8.50",
             "url": "./assets/images/tajine-poulet.jfif",
             "category": "Plats",
@@ -122,6 +125,7 @@
         {
             "id": 16,
             "title": "Tajine d'Agneau aux pruneaux et amandes",
+            "description": "Accompagnement pomme de terre sautée",
             "price": "10.50",
             "url": "./assets/images/Tajine-pruneaux.jpg",
             "category": "Plats",
@@ -129,7 +133,8 @@
         },
         {
             "id": 17,
-            "title": "Pastille individuelles sucrée salée au poulet (Amandes et confits d'oigons)",
+            "title": "Pastille individuelles sucrée salée au poulet",
+            "description": "Amandes et confits d'oigons",
             "price": "4.50",
             "url": "./assets/images/Pastilla-marocaine-au-poulet-et-amandes.jpg",
             "category": "Plats",
@@ -137,7 +142,8 @@
         },
         {
             "id": 18,
-            "title": "Pastille individuelles au poisson (Trio de poissons, crustacés et vermicelles de riz)",
+            "title": "Pastille individuelles au poisson",
+            "description": "Trio de poissons, crustacés et vermicelles de riz",
             "price": "7.00",
             "url": "./assets/images/pastilla-au-poisson.jpg",
             "category": "Plats",
@@ -146,6 +152,7 @@
         {
             "id": 19,
             "title": "Merguez",
+            "description": "",
             "price": "2.00",
             "url": "./assets/images/merguez.jpg",
             "category": "Supplements",
@@ -154,6 +161,7 @@
         {
             "id": 20,
             "title": "Brochette de poulet",
+            "description": "",
             "price": "2.50",
             "url": "./assets/images/Brochettes-de-poulet.jpg",
             "category": "Supplements",
@@ -162,6 +170,7 @@
         {
             "id": 21,
             "title": "Brochettes d'Agneau",
+            "description": "",
             "price": "3.00",
             "url": "./assets/images/brochettes-d-agneau-aux-poivrons-et-feta.jpg",
             "category": "Supplements",
@@ -169,17 +178,19 @@
         },
         {
             "id": 22,
-            "title": "Cornes de gazelles, Makrout, Boules de neige coco ,Briouates aux Amandes Baklawa roumé aux amandes,Sablé confiture",
+            "title": "Plateaux de patisseries",
+            "description": "Cornes de gazelles, Makrout, Boules de neige coco, Briouates aux Amandes Baklawa roumé aux amandes, Sablé confiture",
             "libele": "Plateaux de 30 piéces",
             "price": "25.00",
             "url": "./assets/images/plateau30.png",
-            "category": "Patisseries",
-            "dataFilter": "Patisseries"
+            "category": "Patisseriesr",
+            "dataFilter": "Patisseriesr"
 
         },
         {
             "id": 23,
-            "title": "Cornes de gazelles, Makrout, Boules de neige coco ,Briouates aux Amandes Baklawa roumé aux amandes,Sablé confiture",
+            "title": "Plateaux de patisseries",
+            "description": "Cornes de gazelles, Makrout, Boules de neige coco, Briouates aux Amandes Baklawa roulé aux amandes, Sablé confiture",
             "libele": "Plateaux de 10 piéces",
             "price": "8.50",
             "url": "./assets/images/plateau.jpg",
@@ -189,7 +200,9 @@
         },
         {
             "id": 24,
-            "title": "Cornes de gazelles, Makrout, Boules de neige coco ,Briouates aux Amandes Baklawa roumé aux amandes,Sablé confiture",
+            "title": "Patisseries à l'unité",
+            "description": "Cornes de gazelles, Makrout, Boules de neige coco, Briouates aux Amandes Baklawa roulé aux amandes, Sablé confiture",
+            "libele": "Patisserie a l'unité",
             "libele": "Patisserie a l'unité",
             "price": "0.95",
             "url": "./assets/images/corne_de_gazelle.jpg",
@@ -198,7 +211,9 @@
         },
         {
             "id": 25,
-            "title": "Msemen (Galette feuilleté)",
+            "title": "Msemen",
+            "description": "Galette feuilleté",
+            "libele": "Plateaux de 10 piéces",
             "price": "1.50",
             "url": "./assets/images/Msemen.jpg",
             "category": "Patisseries",
@@ -206,7 +221,8 @@
         },
         {
             "id": 26,
-            "title": "Baghrir (crêpes milles trous)",
+            "title": "Baghrir",
+            "description": "Crêpes milles trous",
             "price": "1.50",
             "url": "./assets/images/Baghrir.jpg",
             "category": "Patisseries",
@@ -214,7 +230,8 @@
         },
         {
             "id": 27,
-            "title": "tiramisou",
+            "title": "Tiramisou",
+            "description": "Tiramisou",
             "price": "2.50",
             "url": "./assets/images/tiramisou.jpg",
             "category": "Desserts",

@@ -676,8 +676,8 @@ img {
 }
 
 .recipes .filters span.active {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--deep-yellow);
+    border-color: var(--deep-yellow);
 }
 
 .recipes .products .swiper-wrapper {
