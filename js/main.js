@@ -24,7 +24,7 @@ document.querySelector(".close-form").onclick = () => {
 /* ========== copyright function Date() affiche l'année =========== */
 const paragraph = `
 <p>
-  Copyright &copy; ${new Date().getFullYear()} YMN - RESTAURANT ORIENTAL
+  &copy; ${new Date().getFullYear()} YMN - RESTAURANT ORIENTAL
 </p>
 `;
 

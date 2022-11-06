@@ -30,7 +30,7 @@
   //$requette = "select * from evenements  ;";//pour le teste if faut changer la date NOW() ou une date > '2022-07-22';
   $cnx = new sql();
   $requette = $cnx->afficher($requette);
-  if (isset($requette) & !empty($requette)) {
+  if (isset($requette) && !empty($requette)) {
 
 
     echo '<div class="container">';
@@ -57,7 +57,7 @@
       echo '<td data-column="Adresse">' . $value['adress_event'] . '</td>';
       echo '<td data-column="Date">' . $value['date_event'] . '</td>';
       echo '<td data-column="Description">' . $value['description_event'] . '</td>';
-      echo '<td data-column="Video"> <div class="video">' . $value['video_event'] .'</div></td>';
+      echo '<td data-column="Video"> <div class="video">' . $value['video_event'] . '</div></td>';
 
       echo '</tr>';
     }
