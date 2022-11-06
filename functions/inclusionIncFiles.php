@@ -12,3 +12,4 @@ function inclusionIncFile(string $defaultPage): void
     else
         require $pageTest;
 }
+

@@ -10,9 +10,8 @@ echo" <select >";
  foreach ($requette as $key => $value) {
 $nom =   $value['Libelle'];
 
-   
     echo "<option value=".$nom.">";
-   echo "$nom";
+    echo "$nom";
     echo"</option>";
 
 } 

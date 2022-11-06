@@ -25,7 +25,7 @@ if (isset($_POST['frmConnexion'])) {
         $messageErreur .= "</ul>";
 
         echo $messageErreur;
-        include './includes/frmConnexion.php';
+        include './includes/adminfrmConnexion.php';
     } else {
         if (isset($_POST['submit'])) {
             $t = $_POST['mdp'];

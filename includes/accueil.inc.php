@@ -36,7 +36,7 @@
                     <img src="./assets/images/repasOriental.png" alt="" />
 
                 </p>
-                <a href="" class="btn">Voir notre carte de menu</a>
+                <a href="#recipes" class="btn">Voir notre carte de menu</a>
             </div>
             <div class="col">
                 <img src="./assets/images/commandeHome.png" alt="" />
@@ -51,17 +51,17 @@
 
             <div class="control">
                 <label for="">Email:</label>
-                <input type="email" placeholder="Entrer votre Email" />
+                <input type="email" name="email" placeholder="Entrer votre Email" required />
             </div>
             <div class="control">
                 <label for="">Mot de passe:</label>
-                <input type="password" placeholder="Mot de passe" />
+                <input type="password" name="password" placeholder="Mot de passe" required />
             </div>
             <div class="checkbox d-flex">
                 <input type="checkbox" />
                 <span>Se souvenir de moi</span>
             </div>
-            <button class="btn">Connexion</button>
+            <button class="btn" type="submit">Connexion</button>
             <div class="links">
                 <span>Mot de passe oublié? <a href="">Click ici</a></span>
                 <span>Vous n'avez pas de compte? <a href="">Créer un compte</a></span>
@@ -72,9 +72,12 @@
             <i class="bx bx-x"></i>
         </div>
     </div>
-</header>
+
+
+
+ </header>
 <!--=============== Services ===============-->
-<section class="section services" id="services">
+<!--<section class="section services" id="services">
     <div class="row container">
         <div class="col">
             <h2>Why we are Best in our Twon</h2>
@@ -85,7 +88,7 @@
         </div>
         <div class="col">
             <div class="card">
-                <img src="/assets/images/meat-icon.svg" alt="" />
+                <img src="./assets/images/meat-icon.svg" alt="" />
                 <h3>
                     Choose <br /> your favorite <br /> food
                 </h3>
@@ -93,7 +96,7 @@
         </div>
         <div class="col">
             <div class="card">
-                <img src="/assets/images/delivery-icon.svg" alt="" />
+                <img src="./assets/images/delivery-icon.svg" alt="" />
                 <h3>
                     Get delivery <br /> at your door <br /> step
                 </h3>
@@ -101,40 +104,117 @@
         </div>
         <div class="col">
             <div class="card">
-                <img src="/assets/images/phone-icon.svg" alt="" />
+                <img src="./assets/images/phone-icon.svg" alt="" />
                 <h3>
                     We have <br /> 400+ Review <br /> On our app
                 </h3>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--=============== Recipes ===============-->
+
 <section class="section recipes" id="recipes">
+
     <h2>Découvrez nos plats typiquement orientaux</h2>
+            
+              
     <div class="row container">
         <div class="category">
-            <div class="swiper mySwiper filters d-flex">
-                <div class="swiper-wrapper filters d-flex" id="category-wrapper">
-                <span data-filter></span>
-                </div>
+            <div class="swiper mySwiper filters d-flex col">
+            <div class="container">
+  <div class="flex-parent">
+    <div class="flex-item swiper-wrapper filters"  id="category-wrapper">
+   
+    <?php 
+                    $reqSelectCategorie = "SELECT * FROM categorie";
+                    $cnx = new sql();
+                    $reqSelectCategorie = $cnx->afficher($reqSelectCategorie);
+                                               
+                    foreach ($reqSelectCategorie as $key => $value) { ?>
+                     
+                    <div class="filters swiper-wrapper target" id="<?php echo $value['dataFilter_categorie'];?>" >
+                
+                    <a  id="<?php echo $value['dataFilter_categorie'];?>" class="active" name="<?php echo $value['dataFilter_categorie'];?>" href="?dataFilter=<?php echo $value['dataFilter_categorie']; ?>#recipes">
+                        <?php echo $value['nom_categorie'];?>
+                    </a>
+                    </div>
+                    <?php   
+                    }
+                   ?>
+    </div>
+
+
+  </div>
+              
             </div>
-        
         </div>
         <div class="products">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper" id="products-wrapper"></div>
+            <div class="swiper mySwiper">                  
+                <div class="swiper-wrapper" id="products-wrapper">
+              
+           
+                    <?php   
+                    if(!isset($_GET['dataFilter']))
+                    {
+                         $AlldataFilter = "AllProduct";
+                         $reqSelectProduits = "SELECT * FROM produits, categorie WHERE categorie.dataFilter_categorie ='". $AlldataFilter ."'";
+                    }
+                    if(isset($_GET['dataFilter']) && $_GET['dataFilter']=="AllProduct")
+                    {
+                        $reqSelectProduits = "SELECT * FROM produits";   
+                    }
+                    if(isset($_GET['dataFilter']) && $_GET['dataFilter']!="AllProduct")
+                    {
+            
+                        $filterCategorie = $_GET['dataFilter'];
+                        $reqSelectProduits = "SELECT * FROM produits WHERE dataFilter_produit ='". $filterCategorie ."'";
+                        
+                    }
+
+                    $cnx = new sql();
+                    $reqSelectProduits = $cnx->afficher($reqSelectProduits);
+                    ?>
+                    
+
+                    <?php
+                    
+                    foreach ($reqSelectProduits as $key => $value) 
+                    {
+                    ?> 
+                    <div class="swiper-slide">
+                        <div class="card d-flex">
+                            <div class="image"><img src="<?php echo $value['url_produit']; ?>" alt=""></div>
+                                <h4><?php echo $value['titre_produit']; ?></h4>
+                            <div class="description">
+                            <p>
+                                <ul>
+                                    <li>
+                                        <?php echo $value['description_produit']; ?>
+                                    </li>
+                                </ul> 
+                            </p>
+                            </div>
+                            <div class="price">
+                                <span>Prix</span>
+                                <span class="color"><?php echo $value['prix_produit']; ?> €</span>
+                            </div>
+                            <div class="button btn">Voir la carte</div>
+                        </div>
+                    </div>
+                    <?php
+                    } 
+                    ?>
+                </div>
                 <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
+                <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
         </div>
-            </div>
-            <div class="pagination">
-                <div class="custom-pagination"></div>
-            </div>
-        </div> 
-        
-       
+        <div class="pagination">
+            <div class="custom-pagination"></div>
+        </div>
+    </div>
 </section>
 
 <!--=============== Testimonials ===============-->

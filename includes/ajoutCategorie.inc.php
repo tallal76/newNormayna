@@ -1,14 +1,14 @@
 <h1>Ajouter une categorie</h1>
 <?php
-if (isset($_POST['frmCategorie'])) {
-    $libelle = htmlentities(trim($_POST['libelle']));
-    $description = htmlentities(trim($_POST['description']));
+if (isset($_POST['frmAjoutCategorie'])) {
+    $nom = htmlentities(trim($_POST['nom_categorie']));
+    $dataFilter = htmlentities(trim($_POST['dataFilter']));
 
 
     $erreurs = array();
 
-    if (mb_strlen($libelle) === 0)
-        array_push($erreurs, "Il manque votre libelle");
+    if (mb_strlen($nom) === 0)
+        array_push($erreurs, "Il manque votre nom");
     if (count($erreurs)) {
         $messageErreur = "<ul>";
 
@@ -22,16 +22,16 @@ if (isset($_POST['frmCategorie'])) {
 
         echo $messageErreur;
 
-        include './includes/frmCategorie.php';
+        include './includes/frmAjoutCategorie.php';
     } else {
-         $requete = "INSERT INTO categorie (Libelle, Description)
-            VALUES ('$libelle', '$description');";
+         $requete = "INSERT INTO categorie (nom_categorie, dataFilter)
+            VALUES ('$nom', '$dataFilter');";
 
         $queryInsert = new Sql();
         $queryInsert->inserer($requete); 
         /*   header('Location:./index.php?page=acceuil'); c'est juste pour redireger */    
     }
 } else {
-     $libelle = $description = "";
-    include './includes/frmCategorie.php'; 
+     $nom = $dataFilter = "";
+    include './includes/frmAjoutCategorie.php'; 
 }

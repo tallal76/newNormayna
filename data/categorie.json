@@ -1,0 +1,37 @@
+{
+    "categorie": [{
+            "id_categorie": 0,
+            "nom_categorie": "Voir tous nos plats",
+            "dataFilter": "AllProduct"
+        }, {
+            "id_categorie": 1,
+            "nom_categorie": "Nos Entrées",
+            "dataFilter": "Entrees"
+        }, {
+            "id_categorie": 2,
+            "nom_categorie": "Nos plats",
+            "dataFilter": "Plats"
+
+        }, {
+            "id_categorie": 3,
+            "nom_categorie": "Nos suppléments",
+            "dataFilter": "Supplements"
+
+        }, {
+            "id_categorie": 4,
+            "nom_categorie": "Nos patisseries orientales",
+            "dataFilter": "Patisseries"
+
+        }, {
+            "id_categorie": 5,
+            "nom_categorie": "Nos desserts",
+            "dataFilter": "Desserts"
+        },
+
+        {
+            "id_categorie": 6,
+            "nom_categorie": "Nos boissons",
+            "dataFilter": "Boissons"
+        }
+    ]
+}
