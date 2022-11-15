@@ -123,29 +123,29 @@
         <div class="category">
             <div class="swiper mySwiper filters d-flex col">
             <div class="container">
-  <div class="flex-parent">
-    <div class="flex-item swiper-wrapper filters"  id="category-wrapper">
-   
-    <?php 
-                    $reqSelectCategorie = "SELECT * FROM categorie";
-                    $cnx = new sql();
-                    $reqSelectCategorie = $cnx->afficher($reqSelectCategorie);
-                                               
-                    foreach ($reqSelectCategorie as $key => $value) { ?>
-                     
-                    <div class="filters swiper-wrapper target" id="<?php echo $value['dataFilter_categorie'];?>" >
+                <div class="flex-parent">
+                    <div class="flex-item swiper-wrapper filters"  id="category-wrapper">
                 
-                    <a  id="<?php echo $value['dataFilter_categorie'];?>" class="active" name="<?php echo $value['dataFilter_categorie'];?>" href="?dataFilter=<?php echo $value['dataFilter_categorie']; ?>#recipes">
-                        <?php echo $value['nom_categorie'];?>
-                    </a>
+                    <?php 
+                                    $reqSelectCategorie = "SELECT * FROM categorie";
+                                    $cnx = new sql();
+                                    $reqSelectCategorie = $cnx->afficher($reqSelectCategorie);
+                                                            
+                                    foreach ($reqSelectCategorie as $key => $value) { ?>
+                                    
+                                    <div class="filters swiper-wrapper target" id="<?php echo $value['dataFilter_categorie'];?>" >
+                                
+                                    <a  id="<?php echo $value['dataFilter_categorie'];?>" class="active" name="<?php echo $value['dataFilter_categorie'];?>" href="?dataFilter=<?php echo $value['dataFilter_categorie']; ?>#recipes">
+                                        <?php echo $value['nom_categorie'];?>
+                                    </a>
+                                    </div>
+                                    <?php   
+                                    }
+                                ?>
                     </div>
-                    <?php   
-                    }
-                   ?>
-    </div>
 
 
-  </div>
+                </div>
               
             </div>
         </div>
