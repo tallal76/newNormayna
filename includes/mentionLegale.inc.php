@@ -1,4 +1,4 @@
-<div id="box">
+<div id="box_legal">
 
 <h1>Mentions légales et politique de confidentialité</h1>
 <p>L'entreprise individuelle MADAME FATNA BELKASMI, soucieuse des droits des individus, notamment au regard des traitements automatisés et dans une volonté de transparence avec ses clients, a mis en place une politique reprenant l'ensemble de ces traitements, des finalités poursuivies par ces derniers ainsi que des moyens d'actions a la disposition des individus afin qu'ils puissent au mieux exercer leurs droits.</p>
@@ -6,7 +6,7 @@
 <p>La poursuite de la navigation sur ce site vaut acceptation sans réserve des dispositions et conditions d'utilisation qui suivent La version actuellement en ligne de ces conditions d'utilisation est la seule opposable pendant toute la durée d'utilisation du site et jusqu'à ce qu'une nouvelle version la remplace.</p>
 <h2>Article 1 - Mentions légales</h2>
 <h3>1.1 Site (ci-après « le site »):</h3>
-<p>YMN</p>
+<p><strong>YMN</strong></p>
 <h3>1.2 Editeur (ci-après « l'éditeur »):</h3>
 <p>L'entreprise individuelle MADAME FATNA BELKASMI</p>
 <p>située: 23 rue André Callac, 76350 OISSEL</p>
