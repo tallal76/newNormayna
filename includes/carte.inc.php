@@ -30,7 +30,7 @@
     </div>
     <div class="carte">
       <div class="swiper mySwiper">                  
-        <div class="swiper-wrapper" id="products-wrapper">
+        <div class="carte_swiper-wrapper" id="products-wrapper">
         <?php    
       
          if(!isset($_GET['dataFilter']))
@@ -78,15 +78,16 @@
                                  <h5><span class="prix"><?php echo $value['prix_produit']; ?> €</span></h5>
                                  </li>
                                  <li>
-                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                         <path d="M4.9713 2.5C7.00005 2.5 8.00005 4.5 8.00005 4.5C8.00005 4.5 9.00005 2.5 11.0288 2.5C12.6775 2.5 13.9832 3.87937 14 5.52531C14.0344 8.94187 11.2897 11.3716 8.2813 13.4134C8.19836 13.4699 8.10036 13.5 8.00005 13.5C7.89973 13.5 7.80174 13.4699 7.7188 13.4134C4.71067 11.3716 1.96598 8.94187 2.00005 5.52531C2.01692 3.87937 3.32255 2.5 4.9713 2.5Z" stroke-linecap="round" stroke-linejoin="round"/>
-                                     </svg>
-                                     237
+                                     <a href="#">
+                                     <i class="fa-solid fa-heart"></i>
+                                     </a>
+                                     &nbsp;237
                                  </li>
                              </ul>
-                            
-                     </div> <!-- end card-meta -->
-                 </div> <p><?php echo $value['description_produit']; ?></p>
+                     </div>
+                 </div> 
+                 <p><?php echo $value['description_produit']; ?></p>
+                 <!-- footer carte -->
                  <div class="button btn"><a href="http://"> Ajouter +</a></div>
              </div>
          </div>
