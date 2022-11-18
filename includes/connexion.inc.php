@@ -15,17 +15,14 @@ if (isset($_POST['frmConnexion'])) {
 
     if (count($erreurs)) {
         $messageErreur = "<ul>";
-
         for ($i = 0; $i < count($erreurs); $i++) {
             $messageErreur .= "<li>";
             $messageErreur .= $erreurs[$i];
             $messageErreur .= "</li>";
         }
-
         $messageErreur .= "</ul>";
-
         echo $messageErreur;
-        include './includes/adminfrmConnexion.php';
+        include './includes/frmConnexion.php';
     } else {
         if (isset($_POST['submit'])) {
             $t = $_POST['mdp'];
@@ -37,27 +34,23 @@ if (isset($_POST['frmConnexion'])) {
                 $resultatPassword = $resultatLogin[0]['password'];
                 $nom = $resultatLogin[0]['nom'];
                 $prenom = $resultatLogin[0]['prenom'];
+                $fullname = $nom." ".$prenom;
                 if ($t == $resultatPassword) {
-                    $message = "Vous êtes connecté";
-                    $_SESSION['login'] = true;
-
+                    $message = "Vous êtes connecté </br> Bienvenue " . $fullname;
+                  
+                    $_SESSION['login'] = $fullname;
                     $messageEmail = $mail . ' vous êtes connecté !';
-                }
-                //sendEmail($mail, 'contact@ceppic-php-file-rouge.fr', 'Login Success', $messageEmail);
-                else {
+                } else {
                     $message = "Erreur d'authentification";
                     $_SESSION['login'] = false;
                 }
             } else {
                 $message = "Votre adresse n'est pas dans la base";
             }
-            echo "Bienvenue" . $nom . " " . $prenom . "</br>";
-            echo $message;
-
-            // $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
-
-            //echo redirection($url, 2000);
-            // echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>";
+            header ('location:index.php?page=acceuil');
+           /*  echo $message;
+            $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
+            echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>"; */
         }
     }
 } else {
