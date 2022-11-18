@@ -1,3 +1,4 @@
+
 <h1>Ajouter un Produit</h1>
 <?php
 //remplir la list
@@ -52,7 +53,8 @@ if (isset($_POST['frmProduit'])) {
             // VALUES (NULL, 'requete', '5', 'l00',( SELECT id_categorie from Categorie WHERE libelle ='Nos Plats'));
             //trouve une solution pour recuperer la valeur de l'id selection de la liste
 
-            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie,description)
+            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie,description
+            )
             VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$t'),'$description');";
 
             $queryInsert = new Sql();

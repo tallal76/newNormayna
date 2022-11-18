@@ -11,16 +11,14 @@
               $reqSelectCategorie = $cnx->afficher($reqSelectCategorie);
                                      
               foreach ($reqSelectCategorie as $key => $value) { ?>
-              
               <div class="filters swiper-wrapper target" id="<?php echo $value['dataFilter_categorie'];?>" >
-                  
                       <h2>
                           <a  id="<?php echo $value['dataFilter_categorie'];?>" class="active" name="<?php echo $value['dataFilter_categorie'];?>" 
                               href="?page=carte&dataFilter=<?php echo $value['dataFilter_categorie']; ?>&nom_categorie=<?php echo $value['nom_categorie'];?>">
                               <?php echo $value['nom_categorie'];?>
                           </a>
                       </h2>
-                  
+
               </div>
               <?php   
               }
