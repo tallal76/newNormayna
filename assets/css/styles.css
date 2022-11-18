@@ -107,7 +107,7 @@ img {
 
 @media (min-width: 1500px) {
   .container {
-    max-width: 135rem;
+    max-width: 161rem;
   }
 }
 
@@ -1013,7 +1013,7 @@ img {
 }
 .dish-type {
   font-weight: 800;
-  letter-spacing: 0.50px;
+  letter-spacing: 0.5px;
   color: var(--primary-color);
   margin: 0;
   background-color: var(--dish-type-color);

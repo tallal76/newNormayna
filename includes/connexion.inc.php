@@ -47,7 +47,7 @@ if (isset($_POST['frmConnexion'])) {
             } else {
                 $message = "Votre adresse n'est pas dans la base";
             }
-            header ('location:index.php?page=acceuil');
+            header ('location:index.php?page=accueil');
            /*  echo $message;
             $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
             echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>"; */
