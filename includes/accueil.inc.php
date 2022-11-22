@@ -2,8 +2,13 @@
     <!--=============== Navbar ===============-->
     <?php
     require_once './includes/nav.php';
+    if (isset($_SESSION['login'])) {
+        echo "Bienvenue <strong>". $_SESSION['login']."</strong>";
+    }
     ?>
     <!--=============== Caroussel ===============-->
+    
+    
     <div class="boite">
         <div class="contenu_carou_auto">
             <div class="caroussel-image">
@@ -46,26 +51,29 @@
 
     <!--=============== SignIn Form ===============-->
     <div class="wrapper">
-        <form action="" class="form">
+        <form action="index.php?page=connexion" method="post" class="form">
             <h2>SE CONNECTER</h2>
 
             <div class="control">
-                <label for="">Email:</label>
-                <input type="email" name="email" placeholder="Entrer votre Email" required />
+                <label for="mail">Email:</label>
+                <input type="text"  id="mail" name="mail" placeholder="Entrer votre Email" required />
             </div>
             <div class="control">
-                <label for="">Mot de passe:</label>
-                <input type="password" name="password" placeholder="Mot de passe" required />
+                <label for="mdp">Mot de passe:</label>
+                <input type="password" id="mdp" name="mdp" placeholder="Mot de passe" required />
             </div>
             <div class="checkbox d-flex">
                 <input type="checkbox" />
                 <span>Se souvenir de moi</span>
             </div>
+            <input type="reset" value="Effacer" />
             <button class="btn" type="submit">Connexion</button>
+         
             <div class="links">
                 <span>Mot de passe oublié? <a href="">Click ici</a></span>
                 <span>Vous n'avez pas de compte? <a href="">Créer un compte</a></span>
             </div>
+            <input type="hidden" name="frmConnexion" />
         </form>
 
         <div class="close-form">
