@@ -1,7 +1,7 @@
 <form action="index.php?page=connexion" method="post">
     <div>
         <label for="mail">e-mail :</label>
-        <input type="text" id="mail" name="mail" value="<?= $mail ?>" required />
+        <input type="text" id="mail" name="mail" required />
     </div>
     <div>
         <label for="mdp">Mot de passe :</label>

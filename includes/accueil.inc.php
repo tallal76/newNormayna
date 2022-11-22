@@ -56,7 +56,7 @@
 
             <div class="control">
                 <label for="mail">Email:</label>
-                <input type="text"  id="mail" name="mail"  placeholder="Entrer votre Email" required />
+                <input type="text"  id="mail" name="mail" placeholder="Entrer votre Email" required />
             </div>
             <div class="control">
                 <label for="mdp">Mot de passe:</label>
@@ -68,11 +68,12 @@
             </div>
             <input type="reset" value="Effacer" />
             <button class="btn" type="submit">Connexion</button>
-            <input type="hidden" name="accueil" />
+         
             <div class="links">
                 <span>Mot de passe oublié? <a href="">Click ici</a></span>
                 <span>Vous n'avez pas de compte? <a href="">Créer un compte</a></span>
             </div>
+            <input type="hidden" name="frmConnexion" />
         </form>
 
         <div class="close-form">
