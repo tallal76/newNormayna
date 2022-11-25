@@ -12,9 +12,9 @@
     <div class="boite">
         <div class="contenu_carou_auto">
             <div class="caroussel-image">
-                <img src="./assets/imgslider/briwate.jpg" alt>
-                <img src="./assets/imgslider/couscous-mergez.jpg" alt>
                 <img src="./assets/imgslider/msmen-farsi.jpg" alt>
+                <img src="./assets/imgslider/patisserie_plateau13.jpg" alt>
+                <img src="./assets/imgslider/mssemens.jpg" alt>
                 <img src="./assets/imgslider/msmn.jpg" alt>
                 <img src="./assets/imgslider/poulet.jpg" alt>
                 <img src="./assets/imgslider/viande-prune.jpg" alt>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div id="infos">
-        Passez votre commande au <strong> 06 13 40 45 87 - Repas à emporter ou à livrer</strong>
+        Passez votre commande au <strong> 06 13 40 45 87 - Repas à emporter</strong>
     </div>
     <!--=============== Home ===============-->
     <div class="home">
@@ -34,8 +34,8 @@
 
                 </div>
                 <h1>
-                    Votre repas livré <br />
-                    <span class="color">à votre porte</span>
+                    Votre repas prêt <br />
+                    <span class="color">à être emporter</span>
                 </h1>
                 <p>
                     <img src="./assets/images/repasOriental.png" alt="" />
@@ -80,47 +80,7 @@
             <i class="bx bx-x"></i>
         </div>
     </div>
-
-
-
  </header>
-<!--=============== Services ===============-->
-<!--<section class="section services" id="services">
-    <div class="row container">
-        <div class="col">
-            <h2>Why we are Best in our Twon</h2>
-            <p>
-                whole grains and low-fat dairy can help to reduce your risk of heart disease by maintaining blood
-                pressure and
-            </p>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="./assets/images/meat-icon.svg" alt="" />
-                <h3>
-                    Choose <br /> your favorite <br /> food
-                </h3>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="./assets/images/delivery-icon.svg" alt="" />
-                <h3>
-                    Get delivery <br /> at your door <br /> step
-                </h3>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="./assets/images/phone-icon.svg" alt="" />
-                <h3>
-                    We have <br /> 400+ Review <br /> On our app
-                </h3>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!--=============== Recipes ===============-->
 
 <section class="section recipes" id="recipes">
 
@@ -133,7 +93,6 @@
             <div class="container">
                 <div class="flex-parent">
                     <div class="flex-item swiper-wrapper filters"  id="category-wrapper">
-                
                     <?php 
                                     $reqSelectCategorie = "SELECT * FROM categorie";
                                     $cnx = new sql();
@@ -229,105 +188,23 @@
 <section class="section testimonials" id="testimonials">
     <div class="row container">
         <div class="col">
-            <div class="card" data-filter="rosele">
+            <div class="card">
                 <div class="d-flex">
-                    <div class="image">
-                        <img src="./assets/images/profile-1.jpg" alt="" />
-                    </div>
-                    <div>
-                        <h4>Rosele Desoza</h4>
-                        <span>Marketing Coordinator</span>
-                    </div>
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Floris.rtn%2Fposts%2Fpfbid0KmmgRgqtPY6mVgE1Wn9SWVVyQ6E86db6jP5pSh2pr8fTB76TLmLxXZpbQv4qEwVBl&show_text=true&width=500" width="500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-            </div>
-            <div class="card" data-filter="marvin">
                 <div class="d-flex">
-                    <div class="image">
-                        <img src="./assets/images/profile-2.jpg" alt="" />
-                    </div>
-                    <div>
-                        <h4>Marvin McKinney</h4>
-                        <span>Web Designer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-filter="guy">
-                <div class="d-flex">
-                    <div class="image">
-                        <img src="./assets/images/profile-3.jpg" alt="" />
-                    </div>
-                    <div>
-                        <h4>Guy Hawkins</h4>
-                        <span>President of Sales</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-filter="kathryn">
-                <div class="d-flex">
-                    <div class="image">
-                        <img src="./assets/images/profile-4.jpg" alt="" />
-                    </div>
-                    <div>
-                        <h4>Kathryn Murphy</h4>
-                        <span>Marketing Coordinator</span>
-                    </div>
-                </div>
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimanen%2Fposts%2Fpfbid021o2owPjatBK9t3peax7P8JYwEYfGuYYXdJgzXcQY5xRmfxNxmH1RySPRffksQu5il&show_text=true&width=500" width="500" height="170" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
             </div>
         </div>
         <div class="col">
             <h2>
-                What our Customers <br />
-                <span>are saying</span>
+                Nos plateaux de patisseries<br />
+                <span>orientales</span>
             </h2>
-            <div class="test-wrapper">
-                <div class="testimonial active" data-id="rosele">
-                    <div class="d-flex">
-                        <div>
-                            <h4>Rosele Desoza</h4>
-                            <span>Marketing Coordinator</span>
-                        </div>
-
-                        <div class="rating">
-                            <span><i class="bx bxs-star"></i></span>
-                            <span><i class="bx bxs-star"></i></span>
-                            <span><i class="bx bxs-star"></i></span>
-                            <span><i class="bx bxs-star"></i></span>
-                            <span><i class="bx bxs-star"></i></span>
-                        </div>
-                    </div>
-
-                    <p>
-                        “Having good restaurant reviews is crucial these days. It is not just making our decision to
-                        pick one easier, it is also helping the restaurant be more successful. You can quickly copy
-                        and
-                        paste these good restaurant review examples, publish them on Facebook”
-                    </p>
-                </div>
+            <div>
+                <img src="./assets/images/patisserie_plateau13.jpg" alt="">
             </div>
         </div>
     </div>
 </section>
 
-<!--=============== App ===============-->
-<section class="section app">
-    <div class="row container">
-        <div class="col">
-            <div class="circle">
-                <div class="inner-circle"></div>
-                <img src="./assets/images/mobile.png" alt="" />
-            </div>
-        </div>
-        <div class="col">
-            <h2>
-                Never Feel Hungry! Download Our Mobile App Order Delicious Food
-            </h2>
-            <p>
-                Online ordering has enabled many restaurants to manage their peak business hours very effectively.
-            </p>
-            <div class="d-flex">
-                <img src="./assets/images/app-store.png" alt="" />
-                <img src="./assets/images/google-play.png" alt="" />
-            </div>
-        </div>
-    </div>
-</section>

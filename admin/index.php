@@ -8,7 +8,7 @@ date_default_timezone_set('Europe/Paris');
 
 require_once './functionsAdm/autoLoadFunctionAdm.php';
 
-require_once './includesAdm/head.php';
-require_once './includesAdm/nav.php';
+require_once './includesAdm/base/head.php';
+require_once './includesAdm/base/nav.php';
 require_once './includesAdm/main.php';
-require_once './includesAdm/footer.php';
+require_once './includesAdm/base/footer.php';
