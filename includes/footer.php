@@ -33,15 +33,14 @@
                 <h2><strong>06 13 40 45 87</strong></h2>
                 <br>
                 23 rue andré Callac<br>76350 OISSEL
-                <a class="footer__btn" href="mailto:example@gmail.com">Contactez nous</a>
+                <a class="footer__btn" href="mailto:odelicesdenor@gmail.com">Contactez nous</a>
             </address>
             </p>
             <div class="icons d-flex">
                 <div class="icon d-flex">
-                    <i class="bx bxl-facebook"></i>
+                    <a href="https://www.facebook.com/profile.php?id=100083460135600"><i class="bx bxl-facebook"></i></a>
                 </div>
-                <div class="icon d-flex"><i class="bx bxl-twitter"></i></div>
-                <div class="icon d-flex"><i class="bx bxl-linkedin"></i></div>
+                
             </div>
         </div>
 
@@ -87,12 +86,7 @@
                 <a href="">Mention légale</a>
                 <a href="#">Sitemap</a>
             </div>
-            <div>
-                <h4>Contact</h4>
-                <a href="">WhatsApp</a>
-                <a href="">Support 24 </a>
-                <a href="">Quick Chat</a>
-            </div>
+           
         </div>
     </div>
 </footer>

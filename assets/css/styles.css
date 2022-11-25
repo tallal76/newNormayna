@@ -2,6 +2,7 @@
 @import url("./sliderAccueil.css");
 @import url("./event.css");
 
+@import url("../css/admin.css");
 /* ========== Google Fonts =========== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
@@ -39,6 +40,12 @@
   --secondary-color-darker: rgb(160, 160, 160);
   --secondary-color-lightest: rgb(253, 253, 251);
   --info-color: rgb(80, 62, 157);
+  --badge-text-color: #ffffff;
+  --badge-default-bg: #2c3e50;
+  --badge-info-bg: #3498db;
+  --badge-warning-bg: #f1c40f;
+  --badge-danger-bg: #e74c3c;
+  --badge-success-bg: #2ecc71;
 }
 
 *,
@@ -96,7 +103,50 @@ img {
   max-width: 100%;
   height: auto;
 }
+.badge {
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #2c3e50;
+  color: #ffffff;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.05rem 0.8rem 0.1rem;
+  line-height: inherit;
+}
 
+.badge--line {
+  background-color: transparent;
+  color: #95a5a6;
+  box-shadow: 0 0 0 1px #95a5a6;
+}
+
+.badge--info {
+  background-color: #3498db;
+}
+
+.badge--warning {
+  background-color: #f1c40f;
+}
+
+.badge--danger {
+  background-color: #e74c3c;
+}
+
+.badge--success {
+  background-color: #2ecc71;
+}
+
+.badge--small {
+  font-size: 1.2rem;
+  padding: 0.1rem 0.65rem 0.2rem;
+}
+
+.badge--smaller {
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem 0.15rem;
+}
 /* ========== Custom Classes =========== */
 
 .container {
@@ -1315,6 +1365,7 @@ img {
 .footer .row {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  text-align: left;
 }
 
 .footer .col:first-child .logo {
@@ -1324,6 +1375,7 @@ img {
 .footer .col:first-child p {
   margin-bottom: 3rem;
   width: 70%;
+  text-align:left;
 }
 
 .footer .col:first-child .icons {
@@ -1373,6 +1425,7 @@ img {
 
 .footer-bottom .row {
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .footer-bottom .row p {
