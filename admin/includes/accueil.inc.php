@@ -1,8 +1,3 @@
-<?php
-    if (isset($_SESSION['login'])) {
-        echo "Bienvenue <strong>". $_SESSION['login']."</strong>";
-    }
-?>
   <!--=============== Stats ===============-->
   <section class="section stats" id="stats">
     <div class="row container">

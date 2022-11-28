@@ -1,5 +1,3 @@
-
-  
 <div class="footer-bottom">
     <div class="row container d-flex">
         <div id="copyright">

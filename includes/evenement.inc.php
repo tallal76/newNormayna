@@ -5,10 +5,7 @@
     <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
     <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
   </ul>
-
   <?php
-
-
   if (isset($_GET['link'])) {
     $var = $_GET['link'];
     if ($var == "futur") {
@@ -22,7 +19,6 @@
     DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event  < NOW();";
     }
   } else {
-
     $requette = "SELECT theme_event,adress_event,
    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event FROM evenements;";
     //$requette = "select * from evenements  ;";
@@ -31,8 +27,6 @@
   $cnx = new sql();
   $requette = $cnx->afficher($requette);
   if (isset($requette) && !empty($requette)) {
-
-
     echo '<div class="container">';
     echo '<div class="box">';
 
@@ -68,6 +62,5 @@
   } else {
     echo " <span class='waring'><strong>!!!!!! il n'ya pas d'evenement</strong></span>";
   }
-
   ?>
 </div>
