@@ -1,5 +1,4 @@
 <?php
-
 function inclusionIncFile(string $defaultPage): void
 {
     $files = glob('./includes/*.inc.php');
@@ -12,4 +11,4 @@ function inclusionIncFile(string $defaultPage): void
     else
         require $pageDefaut;
 }
-
+?>
