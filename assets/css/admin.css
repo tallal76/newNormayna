@@ -1,4 +1,12 @@
-
+h1,
+h2,
+h3,
+h4 {
+    color: var(--primary-color);
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 9px;
+}
 /* css for main content admin */
 .main-content {
     background-color: var(--grey-color-1);
@@ -52,54 +60,91 @@
     font-size: .7rem;
     padding: .05rem .4rem .15rem;
 }
-  
-/* ========== stats =========== */
-
-.stats {
-  
-  }
-  
-  .stats .row {
+/* ========== tableaux crud ===== */ 
+.tbl-head{
+    width: 90%;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-  }
-  .stats .row h2 {
-   
-    margin-bottom: 1rem;
-   
-  }
-  .stats .row h2 i {
-    color:var(--dish-type-color);
-    border-radius: 0 0 1rem 1rem;
-  }
- 
-  
-  .stats .row h3 {
-    height: 5rem;
-    font-size: 2.5rem;
-    margin-top: 1.5rem;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.tbl-full{
+    width: 50%;
+} 
+table tr th{
+    border-bottom: 1px solid var(--black-color);
+}
+table tr td{
+    padding:1%;
+}
 
-  }
-  
-  .stats .row .col i {
-    height: 5rem;
-    color:var(--dish-type-color);
-  }
-  .stats .row .col img {
-    height: 5rem;
+/* ========= boutons ==============*/
+.btn-primary{
+    background-color:var(--primary-color);
+    color:var(--white-color);
+    padding:5px;
+    padding: 0.7rem 2.5rem;
+    border-radius: 1rem;
+    font-size: inherit;
+}
+.btn-primary:hover{
+    background-color:var(--info-color);
+    
+}
+.btn-warning{
+    background-color:var(--deep-yellow);
+    color:var(--white-color);
+   margin:15px;
+    padding:5px;
+}
+.btn-warning:hover{
     background-color:var(--badge-warning-bg);
-  }
-  .stats .row .card {
+    color:var(--white-color);
+}
+.btn-danger{
+    background-color:var(--red-color-1);
+    color:var(--white-color);
+    padding:5px;
+}
+.btn-danger:hover{
+    background-color:var(--red-color-2);
+    color: var(--white-color);
+}
+/* ========== stats =========== */
+ 
+.stats .row {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+}
+.stats .row h2 {
+   margin-bottom: 1rem;
+}
+.stats .row h2 i {
+   color:var(--dish-type-color);
+   border-radius: 0 0 1rem 1rem;
+}
+.stats .row h3 {
+   height: 5rem;
+   font-size: 2.5rem;
+   margin-top: 1.5rem;
+   text-align: center;
+}
+.stats .row .col i {
+   height: 5rem;
+   color:var(--dish-type-color);
+}
+.stats .row .col img {
+   height: 5rem;
+   background-color:var(--badge-warning-bg);
+}
+.stats .row .card {
     padding: 3rem;
     border-radius: 0 0 1rem 1rem;
     background-color: var(--white-color);
     position: relative;
     text-align: center;
-  }
-  
-  .stats .row .card::before {
+}
+.stats .row .card::before {
     content: "";
     position: absolute;
     top: -1.5%;
@@ -110,12 +155,12 @@
     background: linear-gradient(to bottom, transparent 50%, #f3f3f3);
     z-index: -1;
   }
+ 
+.stats .row .card:hover::before {
+   background: linear-gradient(to bottom, transparent 50%, #ffcf03);
+}
   
-  .stats .row .card:hover::before {
-    background: linear-gradient(to bottom, transparent 50%, #ffcf03);
-  }
-  
-  @media (max-width: 567px) {
+@media (max-width: 567px) {
     .stats .row{
         display: flex;
         flex-wrap: nowrap;

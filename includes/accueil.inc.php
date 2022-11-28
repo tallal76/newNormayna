@@ -51,7 +51,7 @@
 
     <!--=============== SignIn Form ===============-->
     <div class="wrapper">
-        <form action="index.php?page=connexion" method="post" class="form">
+        <form action="index.php?page=connexion" method="POST" class="form">
             <h2>SE CONNECTER</h2>
 
             <div class="control">
@@ -85,8 +85,7 @@
 <section class="section recipes" id="recipes">
 
     <h2>Découvrez nos plats typiquement orientaux</h2>
-            
-              
+
     <div class="row container">
         <div class="category">
             <div class="swiper mySwiper filters d-flex col">
@@ -94,90 +93,81 @@
                 <div class="flex-parent">
                     <div class="flex-item swiper-wrapper filters"  id="category-wrapper">
                     <?php 
-                                    $reqSelectCategorie = "SELECT * FROM categorie";
-                                    $cnx = new sql();
-                                    $reqSelectCategorie = $cnx->afficher($reqSelectCategorie);
-                                                            
-                                    foreach ($reqSelectCategorie as $key => $value) { ?>
-                                    
-                                    <div class="filters swiper-wrapper target" id="<?php echo $value['dataFilter_categorie'];?>" >
-                                
-                                    <a  id="<?php echo $value['dataFilter_categorie'];?>" class="active" name="<?php echo $value['dataFilter_categorie'];?>" href="?dataFilter=<?php echo $value['dataFilter_categorie']; ?>#recipes">
-                                        <?php echo $value['nom_categorie'];?>
-                                    </a>
-                                    </div>
-                                    <?php   
-                                    }
-                                ?>
-                    </div>
-
-
-                </div>
-              
-            </div>
-        </div>
-        <div class="products">
-            <div class="swiper mySwiper">                  
-                <div class="swiper-wrapper" id="products-wrapper">
-              
-           
-                    <?php   
-                    if(!isset($_GET['dataFilter']))
-                    {
-                         $AlldataFilter = "AllProduct";
-                         $reqSelectProduits = "SELECT * FROM produits, categorie WHERE categorie.dataFilter_categorie ='". $AlldataFilter ."'";
-                    }
-                    if(isset($_GET['dataFilter']) && $_GET['dataFilter']=="AllProduct")
-                    {
-                        $reqSelectProduits = "SELECT * FROM produits";   
-                    }
-                    if(isset($_GET['dataFilter']) && $_GET['dataFilter']!="AllProduct")
-                    {
-            
-                        $filterCategorie = $_GET['dataFilter'];
-                        $reqSelectProduits = "SELECT * FROM produits WHERE dataFilter_produit ='". $filterCategorie ."'";
+                        $reqSelectCategorie = "SELECT * FROM categorie";
+                        $cnx = new sql();
+                        $reqSelectCategorie = $cnx->afficher($reqSelectCategorie);
+                                                
+                        foreach ($reqSelectCategorie as $key => $value) { ?>
                         
-                    }
-
-                    $cnx = new sql();
-                    $reqSelectProduits = $cnx->afficher($reqSelectProduits);
-                    ?>
-                    
-
-                    <?php
-                    
-                    foreach ($reqSelectProduits as $key => $value) 
-                    {
-                    ?> 
-                    <div class="swiper-slide">
-                        <div class="card d-flex">
-                            <div class="image"><img src="<?php echo $value['url_produit']; ?>" alt=""></div>
-                                <h4><?php echo $value['titre_produit']; ?></h4>
-                            <div class="description">
-                            <p>
-                                <ul>
-                                    <li>
-                                        <?php echo $value['description_produit']; ?>
-                                    </li>
-                                </ul> 
-                            </p>
-                            </div>
-                            <div class="price">
-                                <span>Prix</span>
-                                <span class="color"><?php echo $value['prix_produit']; ?> €</span>
-                            </div>
-                            <div class="button btn">Voir la carte</div>
+                        <div class="filters swiper-wrapper target" id="<?php echo $value['dataFilter_categorie'];?>" >
+                        
+                        <a  id="<?php echo $value['dataFilter_categorie'];?>" class="active" name="<?php echo $value['dataFilter_categorie'];?>" href="?dataFilter=<?php echo $value['dataFilter_categorie']; ?>#recipes">
+                            <?php echo $value['nom_categorie'];?>
+                        </a>
                         </div>
-                    </div>
-                    <?php
-                    } 
+                    <?php   
+                    }
                     ?>
                 </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
         </div>
+    </div>
+    <div class="products">
+        <div class="swiper mySwiper">                  
+            <div class="swiper-wrapper" id="products-wrapper">
+                <?php   
+                if(!isset($_GET['dataFilter']))
+                {
+                     $AlldataFilter = "AllProduct";
+                     $reqSelectProduits = "SELECT * FROM produits, categorie WHERE categorie.dataFilter_categorie ='". $AlldataFilter ."'";
+                }
+                if(isset($_GET['dataFilter']) && $_GET['dataFilter']=="AllProduct")
+                {
+                    $reqSelectProduits = "SELECT * FROM produits";   
+                }
+                if(isset($_GET['dataFilter']) && $_GET['dataFilter']!="AllProduct")
+                {
+                    $filterCategorie = $_GET['dataFilter'];
+                    $reqSelectProduits = "SELECT * FROM produits WHERE dataFilter_produit ='". $filterCategorie ."'";
+                }
+
+                $cnx = new sql();
+                $reqSelectProduits = $cnx->afficher($reqSelectProduits);
+                ?>
+                <?php
+                
+                foreach ($reqSelectProduits as $key => $value) 
+                {
+                ?> 
+                <div class="swiper-slide">
+                    <div class="card d-flex">
+                        <div class="image"><img src="<?php echo $value['url_produit']; ?>" alt=""></div>
+                            <h4><?php echo $value['titre_produit']; ?></h4>
+                        <div class="description">
+                        <p>
+                            <ul>
+                                <li>
+                                    <?php echo $value['description_produit']; ?>
+                                </li>
+                            </ul> 
+                        </p>
+                        </div>
+                        <div class="price">
+                            <span>Prix</span>
+                            <span class="color"><?php echo $value['prix_produit']; ?> €</span>
+                        </div>
+                        <div class="button btn">Voir la carte</div>
+                    </div>
+                </div>
+                <?php
+                } 
+                ?>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        
         <div class="pagination">
             <div class="custom-pagination"></div>
         </div>
@@ -189,7 +179,7 @@
     <div class="row container">
         <div class="col">
             <div class="card">
-                <div class="d-flex">
+                <div class="d-flex active">
                     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Floris.rtn%2Fposts%2Fpfbid0KmmgRgqtPY6mVgE1Wn9SWVVyQ6E86db6jP5pSh2pr8fTB76TLmLxXZpbQv4qEwVBl&show_text=true&width=500" width="500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
                 <div class="d-flex">

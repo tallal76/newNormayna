@@ -7,7 +7,9 @@ session_start();
             <div class="navbar__logo"><a href="index.php?page=accueil">
                 <img
                 src="../assets/images/favicon/android-icon-96x96.png" alt="YNM - Restaurant oriental - Oissel"></a>
-                <h2><strong><i class="fa fa-tachometer" aria-hidden="true"></i> Espace dashboard</strong></h2>
+                <h2>
+                    <strong><i class="fa fa-tachometer" aria-hidden="true"></i>
+                 Espace dashboard</strong> - </h2>
             </div>
             <ul class="navbar navbar__links nav-list d-flex">
             <!--
@@ -18,7 +20,7 @@ session_start();
                 <li class="navbar__link"><a href="index.php?page=majProduit">mis a jour produit</a></li>
             -->
                 <li class="navbar__link"><a href="index.php?page=acceuil">Accueil</a></li>
-                <li class="navbar__link"><a href="index.php?page=admin">Admin</a></li>
+                <li class="navbar__link"><a href="index.php?page=manageAdmin">Admin</a></li>
                 <li class="navbar__link"><a href="index.php?page=evenement">Evénements</a></li>
                 <li class="navbar__link"><a href="index.php?page=categorie">Catégorie</a></li>
                 <li class="navbar__link"><a href="index.php?page=produit">Produit</a></li>

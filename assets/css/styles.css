@@ -265,6 +265,10 @@ img {
   border-radius: 1rem;
   font-size: inherit;
 }
+.btn:hover{
+  background-color:var(--info-color);
+  
+}
 
 .navbar .btn {
   margin-left: 1rem;
