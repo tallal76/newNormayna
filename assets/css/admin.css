@@ -76,7 +76,19 @@ table tr th{
 table tr td{
     padding:1%;
 }
+.monCompte{
+  background-color:var(--primary-color);
+  color:var(--white-color);
+  border-radius: 0 0 1rem 1rem;
+  padding:1%;
+}
+.username{
+   border-radius: 0 0 1rem 1rem;
+  padding:1%;
 
+  background-color:var(--primary-color);
+  color:var(--white-color);
+}
 /* ========= boutons ==============*/
 .btn-primary{
     background-color:var(--primary-color);

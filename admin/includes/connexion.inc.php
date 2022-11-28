@@ -1,6 +1,5 @@
 <h1>Login</h1>
 <?php
-
 if (isset($_POST['frmConnexion'])) {
     $mail = htmlentities(trim($_POST['mail']));
     $mdp = htmlentities(trim($_POST['mdp']));

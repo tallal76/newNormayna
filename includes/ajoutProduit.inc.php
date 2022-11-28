@@ -1,8 +1,5 @@
-
 <h1>Ajouter un Produit</h1>
 <?php
-//remplir la list
-
 $requette = "SELECT Libelle FROM categorie";
 $cnx = new sql();
 $requette = $cnx->afficher($requette);
@@ -67,3 +64,4 @@ if (isset($_POST['frmProduit'])) {
     $libelle = $prix = $name = "";
     include './includes/frmProduit.php';
 }
+?>
