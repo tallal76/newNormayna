@@ -1,5 +1,10 @@
+<?php
+    if (isset($_SESSION['login'])) {
+        echo "Bienvenue <strong>". $_SESSION['login']."</strong>";
+    }
+?>
   <!--=============== Stats ===============-->
-<section class="section stats" id="stats">
+  <section class="section stats" id="stats">
     <div class="row container">
         <h2><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i> Statistiques</h2> 
         <div class="col">

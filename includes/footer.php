@@ -44,26 +44,6 @@
             </div>
         </div>
 
-
-        <!--       <div class="facebook1">
-            <iframe
-                src="
-    https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faboussaid.latifa%2Fposts%2Fpfbid031sE58UTmXHec76e2UebsWYDBQJvvSA7RwqqFhgEv8cDHjj8W4xburngzvxr14u5dl&show_text=true&width=500"
-                width="500" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-        </div>
-        <div class="facebook2">
-            <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Floris.rtn%2Fposts%2Fpfbid0KddEq6BhZ4pf3tV42cqWLLJpCXRcVRdmg2ThHkZZE26e21c1hg8LXHTctWTYFLV3l&show_text=true&width=500"
-                width="500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-</div>
-    </div>-->
-
-
         <div class="col">
 
             <div>
