@@ -1,0 +1,41 @@
+/* Create two unequal columns that floats next to each other */
+
+.column {
+  float: left;
+  padding: 10px;
+  min-height: 100vh;
+  
+   /* Should be removed. Only for demonstration */
+}
+.carte_swiper-wrapper {
+  min-height: 100vh;
+  
+  
+}
+.left {
+  width: 70%;
+  
+  background-color:var(--card-bg-color);
+}
+div.left {
+  margin:5px;
+  padding:5px;
+  min-height: 100vh;
+  
+  overflow: auto;
+ 
+}
+.right {
+  width: 25%;
+  
+  background-color:var(--grey-color);
+  border-radius:var(--global-radius);
+  box-shadow:var(--box-shadow);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
