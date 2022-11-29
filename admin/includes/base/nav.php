@@ -20,7 +20,11 @@
             <?php
             if (isset($_SESSION['username'])) {
             ?>
-                <span class="username"> <i class="fa fa-user monCompte" aria-hidden="true"></i><?php echo $_SESSION["username"] ?></span>
+                
+                    <span class="name"><i class="fa fa-user" aria-hidden="true"></i>  <?php echo $_SESSION["username"] ?></span>
+                    <span class="panier">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> 20
+                    </span>
                 <li class="navbar__link">
                     <a href="index.php?page=logout" class="btn signin">
                         <span><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion
@@ -35,15 +39,8 @@
             <button class="burger" onclick="show()">
                 <span class="bar"></span>
             </button>
-            <div class="col d-flex">
-                <form>
-                    <input type="search" placeholder="Search your item" />
-                    <button class="d-flex"><i class="bx bx-search"></i></button>
-                </form>
-                <div class="cart-icon d-flex">
-                    <i class="bx bx-shopping-bag"></i>
-                    <span>0</span>
-                </div>
+            <div class=" d-flex">
+              
             </div> 
             <!-- Hamburger -->
             <div class="hamburger d-flex">

@@ -45,6 +45,7 @@ require_once './includes/base/footer.php';
     <!--=============== Custom StyleSheet ===============-->
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="stylesheet" href="../assets/css/espaceUser.css" />
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <title>YMN - RESTAURANT ORIENTAL - Administrateur</title>
 </head>
