@@ -17,7 +17,7 @@
             <div class="col">
                 <div class="card">
                 <img src="../assets/images/icones/order-food.png" alt="Ventes">
-                    <h3> Ventes <hr><span class="badge badge--info">100</span> </h3> </div>
+                    <h3> Ventes <hr><span class="badge badge--info">100 €</span> </h3> </div>
             </div>
             <div class="col">
                 <div class="card">
@@ -80,9 +80,9 @@
             <ul>
                 <li><span>Cmd #1</span><span class="badge badge--warning"><i class="fa fa-clock-o" aria-hidden="true"></i> En cours</span><span class="prix">18€</span>02/11/22 - 15h30</li>
                 <li><span>Cmd #2</span><span class="badge badge--warning"><i class="fa fa-clock-o" aria-hidden="true"></i> En cours</span><span class="prix">15€</span>02/11/22 - 09h30</li>
-                <li><span>Cmd #3</span><span class="badge badge--success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Livrée</span><span class="prix">35€</span>02/11/22 - 15h30</li>
-                <li><span>Cmd #4</span><span class="badge badge--success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Livrée</span><span class="prix">46€</span>02/11/22 - 11h30</li>
-                <li><span>Cmd #5</span><span class="badge badge--success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Livrée</span><span class="prix">26€</span>02/11/22 - 12h30</li>
+                <li><span>Cmd #3</span><span class="badge badge--success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Emporté</span><span class="prix">35€</span>02/11/22 - 15h30</li>
+                <li><span>Cmd #4</span><span class="badge badge--success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Emporté</span><span class="prix">46€</span>02/11/22 - 11h30</li>
+                <li><span>Cmd #5</span><span class="badge badge--success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Emporté</span><span class="prix">26€</span>02/11/22 - 12h30</li>
                
             </ul>
         </div>

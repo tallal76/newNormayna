@@ -23,7 +23,7 @@
     <div class="row container">
         <div class="col">
             <div class="logo d-flex">
-                <img src="./assets/images/favicon/android-icon-192x192.png" alt="logo" />
+                <img src="./assets/images/logoN/favicon-logoBlanc/android-icon-192x192.png" alt="logo" />
             </div>
             <h2>
                 YNM - Restaurant oriental
@@ -91,6 +91,7 @@
 <script src="./assets/js/menu.js" defer></script>
 <script src="./assets/js/slider.js" defer></script>
 <script src="./assets/js/chat.js" defer></script>
+<script src="./assets/js/ficheCommande.js" defer></script>
 </body>
 
 </html>

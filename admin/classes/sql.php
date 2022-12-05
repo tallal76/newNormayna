@@ -1,4 +1,5 @@
 <?php
+//PDO
 class sql
 {
     private string $serverName = "localhost";
@@ -30,6 +31,11 @@ class sql
     {
         return $this->connexion->query($query)->fetchAll();
     }
+    function numRows($query) {
+		$result  = $this->connexion->exec($query);
+		$rowcount = $result->rowCount();
+		return $rowcount;	
+	}
     public function supprimer($query, $idUser)
     {
         $resultat = $this->connexion->prepare($query);
