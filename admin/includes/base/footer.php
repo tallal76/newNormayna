@@ -19,6 +19,8 @@
 <script src="./assets/js/menu.js" defer></script>
 <script src="./assets/js/slider.js" defer></script>
 <script src="./assets/js/chat.js" defer></script>
+<script src="./assets/js/nav.js" defer></script>
+<script src="/js/ficheCommande.js" defer></script>
 </body>
 
 </html>

@@ -3,28 +3,40 @@
         <div class="row d-flex container">
             <div class="navbar__logo"><a href="index.php?page=accueil">
                 <img
-                src="../assets/images/favicon/android-icon-96x96.png" alt="YNM - Restaurant oriental - Oissel"></a>
-                <h2>
-                    <strong><i class="fa fa-tachometer" aria-hidden="true"></i>
-                    Espace dashboard</strong>
-                </h2>
+                src="../assets/images/logoN/favicon-logoBlanc/android-icon-192x192.png" alt="Normayna - traiteur - Oissel"></a>
+                <h3>
+                    Mon espace
+                </h3>
             </div>
             <ul class="navbar navbar__links nav-list d-flex">
+            <?php
+          
+                if(isset($_SESSION['role']) && $_SESSION['role'] =="admin")
+                { ?>
                 <li class="navbar__link"><a href="index.php?page=acceuil">Accueil</a></li>
                 <li class="navbar__link"><a href="index.php?page=manageAdmin">Admin</a></li>
                 <li class="navbar__link"><a href="index.php?page=evenement">Evénements</a></li>
                 <li class="navbar__link"><a href="index.php?page=categorie">Catégorie</a></li>
                 <li class="navbar__link"><a href="index.php?page=produit">Produit</a></li>
-                <li class="navbar__link"><a href="index.php?page=commande">Commande</a></li>
-               
+                <li class="navbar__link"><a href="index.php?page=commande">Commande</a></li> 
             <?php
-            if (isset($_SESSION['username'])) {
-            ?>
-                
-                    <span class="name"><i class="fa fa-user" aria-hidden="true"></i>  <?php echo $_SESSION["username"] ?></span>
-                    <span class="panier">
-                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> 20
-                    </span>
+            }elseif(isset($_SESSION['role']) && $_SESSION['role'] =="user"){?>
+                <li class="navbar__link"><a href="index.php?page=accueil">Accueil</a></li>
+                <li class="navbar__link"><a href="index.php?page=carte">La carte</a></li>
+                <li class="navbar__link"><a href="index.php?page=evenement">Listes des Evenements</a></li>
+                <li class="navbar__link"><a href="index.php?page=apropos">À propos</a></li>
+                <li class="navbar__link"><a href="index.php?page=commande">Commande</a></li> 
+                    
+            <?php
+            }
+            if (isset($_SESSION['username'])) 
+            {
+            ?> 
+                <span class="name"><i class="fa fa-user" aria-hidden="true"></i>  
+                <?php echo $_SESSION["username"] ?></span>
+                <span class="panier">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i> 20
+                </span>
                 <li class="navbar__link">
                     <a href="index.php?page=logout" class="btn signin">
                         <span><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion

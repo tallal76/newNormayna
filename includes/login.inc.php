@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $requeteLogin="SELECT * FROM utilisateur WHERE username='".$username."' AND password='".$password."'";
     $sqlLogin = new Sql();
     $resultatLogin = $sqlLogin->afficher($requeteLogin);
-    
+    $_SESSION["role"] = $resultatLogin[0]['role'];
     if (count($resultatLogin) > 0) 
     {
         if($resultatLogin[0]['role']=="user")
