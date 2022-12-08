@@ -10,7 +10,7 @@
             <li class="navbar__link"><a href="index.php?page=accueil">Accueil</a></li>
             <li class="navbar__link"><a href="index.php?page=carte">La carte</a></li>
             <li class="navbar__link"><a href="index.php?page=evenement">Listes des Evenements</a></li>
-            <li class="navbar__link"><a href="index.php?page=apropos">À propos</a></li>
+          <!--  <li class="navbar__link"><a href="index.php?page=apropos">À propos</a></li>--> 
             
         <?php
         if (isset($_SESSION['username']))

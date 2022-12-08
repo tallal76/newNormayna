@@ -1,9 +1,9 @@
 <div class="principal">
-  <h1>La liste des Evenements</h1>
+  <h1>La liste des évènements</h1>
   <ul>
-    <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
-    <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
-    <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
+    <li><a href="index.php?page=evenement&link=futur">Évènement avenir</a></li>
+    <li><a href="index.php?page=evenement&link=today">Évènement d'aujoud'hui</a></li>
+    <li><a href="index.php?page=evenement&link=past">Évènement passer</a></li>
   </ul>
   <?php
   if (isset($_GET['link'])) {
@@ -27,7 +27,40 @@
   $cnx = new sql();
   $requette = $cnx->afficher($requette);
   if (isset($requette) && !empty($requette)) {
-    echo '<div class="container">';
+    echo '<div class="tblEvent">';
+    
+    echo '<table>';
+    echo '<thead>';
+    echo '<tr>';
+    echo '<th>Thème</th>';
+    echo '<th>Adresse</th>';
+
+    echo '<th>Date</th>';
+    echo '<th>Description</th>';
+    echo '<th>Video</th>';
+
+    echo '</tr>';
+    echo '</thead>';
+
+    foreach ($requette as $key => $value) {
+
+      echo '<tbody>';
+      echo '<tr>';
+      echo '<td data-column="Thème">' . $value['theme_event'] . '</td>';
+      echo '<td data-column="Adresse">' . $value['adress_event'] . '</td>';
+      echo '<td data-column="Date">' . $value['date_event'] . '</td>';
+      echo '<td data-column="Description">' . $value['description_event'] . '</td>';
+      echo '<td data-column="Video"> <div class="video-responsive">' . $value['video_event'] . '</div></td>';
+
+      echo '</tr>';
+    }
+    echo '</tbody>';
+    echo '</table>';
+    echo '</div>';
+    echo '</div>';
+  } else {
+    echo " <span class='waring'><strong>Pour l'instant il n'y a pas d'évènement programmé </strong></span>";
+    echo '<div class="tblEvent">';
     echo '<div class="box">';
 
     echo '<table>';
@@ -58,9 +91,7 @@
     echo '</tbody>';
     echo '</table>';
     echo '</div>';
-    echo '</div>';
-  } else {
-    echo " <span class='waring'><strong>!!!!!! il n'ya pas d'evenement</strong></span>";
+    
   }
   ?>
 </div>

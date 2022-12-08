@@ -42,24 +42,24 @@
         <div class="col">
 
             <div>
-                <h4>NHM</h4>
-                <a href="">A propos de nous</a>
-                <a href="">Evénements</a>
-                <a href="">La carte</a>
-                <a href="">Locations Map</a>
+                <h4>NORMAYNA</h4>
+                <a href="index.php?page=accueil">A propos de nous</a>
+                <a href="index.php?page=evenement">Evénements</a>
+                <a href="index.php?page=carte">La carte</a>
+                
             </div>
             <div>
                 <h4>La carte</h4>
-                <a href="">Nos Entrées</a>
-                <a href="">Nos plats</a>
-                <a href="">Nos patisseries</a>
-                <a href="">Nos desserts</a>
-                <a href="">Nos boissons</a>
+                <a href="index.php?page=carte&dataFilter=Entrées&nom_categorie=Entrées">Nos Entrées</a>
+                <a href="index.php?page=carte&dataFilter=Plats&nom_categorie=Plats">Nos plats</a>
+                <a href="index.php?page=carte&dataFilter=Patisseries&nom_categorie=Patisseries">Nos patisseries</a>
+                <a href="index.php?page=carte&dataFilter=Desserts&nom_categorie=Desserts">Nos desserts</a>
+                <a href="index.php?page=carte&dataFilter=Boissons&nom_categorie=Boissons">Nos boissons</a>
             </div>
             <div>
-                <h4>Legal</h4>
-                <a href="">Mention légale</a>
-                <a href="#">Sitemap</a>
+                <h4>Légale</h4>
+                <a href="index.php?page=mentionLegale">Mention légale</a>
+                
             </div>
            
         </div>

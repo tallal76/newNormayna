@@ -66,7 +66,7 @@ h4 {
     padding: .05rem .4rem .15rem;
 }
 .alert-primary{
-   background-color: #CFE2FF 
+   background-color: var(--alert-primary);
 }
 .alert-success{
     background-color: #D1E7DD 
@@ -75,7 +75,7 @@ h4 {
     background-color: #F8D7DA 
  }
  .alert-warning{
-    background-color: #FFF3CD 
+    background-color: var(--badge-warning-bg)#FFF3CD 
  }
  .alert-secondary{
     background-color: #D1E7DD 
