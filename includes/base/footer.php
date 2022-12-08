@@ -25,22 +25,17 @@
             <div class="logo d-flex">
                 <img src="./assets/images/logoN/favicon-logoBlanc/android-icon-192x192.png" alt="logo" />
             </div>
-            <h2>
-                YNM - Restaurant oriental
-            </h2>
-            <p>
-            <address>
-                <h2><strong>06 13 40 45 87</strong></h2>
-                <br>
-                23 rue andré Callac<br>76350 OISSEL
-                <a class="footer__btn" href="mailto:odelicesdenor@gmail.com">Contactez nous</a>
-            </address>
-            </p>
+                <h2>Normayna - Traiteur</h2>
+                <address>
+                    <h3><strong>06 13 40 45 87</strong></h3>
+                    <br>
+                    23 rue andré Callac<br>76350 OISSEL
+                    <a class="footer__btn" href="mailto:odelicesdenor@gmail.com">Contactez nous</a>
+                </address>
             <div class="icons d-flex">
                 <div class="icon d-flex">
                     <a href="https://www.facebook.com/profile.php?id=100083460135600"><i class="bx bxl-facebook"></i></a>
                 </div>
-                
             </div>
         </div>
 
