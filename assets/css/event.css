@@ -11,25 +11,26 @@ ul li a {
     text-decoration: none;
 }
 
-.principal {
-    background-image: linear-gradient( rgba(243, 210, 200, 0.65), rgba(247, 231, 226, 0.65)), url("../img/img1.jpg");
+.tblEvent {
+    background-image: linear-gradient( #e4e6eb, rgb(0 0 0 / 15%)), url(../img/img1.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     display: flex;
-    flex-direction: column;
+     flex-direction: column; 
     align-items: center;
     text-align: center;
 }
 
+
 .waring {
-    background-color: red;
+    background-color: var(--alert-warning);
 }
 
 table {
-    width: 750px;
+    width: 1000px;
     border-collapse: collapse;
 }
 
@@ -53,7 +54,10 @@ th {
     text-align: left;
     font-size: 14px;
 }
-
+.video{
+    width:100%;
+    height:auto;
+}
 
 /* 
 Max width before this PARTICULAR table gets nasty
@@ -65,8 +69,9 @@ and also iPads specifically.
 (min-device-width: 768px) and (max-device-width: 1024px) {
     table {
         width: 100%;
-        margin: 20px auto;
+        margin: 0px;
     }
+    
     /* Force table to not be like tables anymore */
     table,
     thead,
@@ -84,6 +89,7 @@ and also iPads specifically.
     }
     tr {
         border: 1px solid #ccc;
+        width:100%;
     }
     td {
         /* Behave  like a "row" */
@@ -98,7 +104,7 @@ and also iPads specifically.
         /* Top/left values mimic padding */
         top: 6px;
         left: 6px;
-        width: 45%;
+        width: auto;
         padding-right: 10px;
         white-space: nowrap;
         /* Label the data */
@@ -106,4 +112,18 @@ and also iPads specifically.
         color: #000;
         font-weight: bold;
     }
+    .video-responsive { 
+        overflow:hidden; 
+        padding-bottom:100%; 
+        position:relative; 
+        height:0;
+        }
+        
+        .video-responsive iframe {
+        left:0; 
+        top:0; 
+        height:100%;
+        width:100%;
+        position:absolute;
+        }
 }
