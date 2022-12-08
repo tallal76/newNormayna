@@ -11,6 +11,7 @@
     <div>
         <label for="file">Image :</label>
         <input type="file" name="file" value="<?= $file ?>" />
+        
     </div>
 
     <select name="repa">
