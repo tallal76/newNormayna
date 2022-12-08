@@ -1071,6 +1071,7 @@ img {
         .col:first-child {
             .logo {
                 margin-bottom: 3rem;
+                justify-content: left;
             }
             p {
                 margin-bottom: 3rem;
@@ -1081,7 +1082,7 @@ img {
             }
             .icon {
                 color: var(--white-color);
-                justify-content: center;
+                justify-content: left;
                 height: 3rem;
                 width: 3rem;
                 border-radius: 0.5rem;

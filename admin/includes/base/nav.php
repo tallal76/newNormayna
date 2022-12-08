@@ -20,7 +20,9 @@
                 <li class="navbar__link"><a href="index.php?page=produit">Produit</a></li>
                 <li class="navbar__link"><a href="index.php?page=commande">Commande</a></li> 
             <?php
-            }elseif(isset($_SESSION['role']) && $_SESSION['role'] =="user"){?>
+            }
+            elseif(isset($_SESSION['role']) && $_SESSION['role'] =="user")
+            {?>
                 <li class="navbar__link"><a href="index.php?page=accueil">Accueil</a></li>
                 <li class="navbar__link"><a href="index.php?page=carte">La carte</a></li>
                 <li class="navbar__link"><a href="index.php?page=evenement">Listes des Evenements</a></li>

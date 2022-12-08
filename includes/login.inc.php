@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
@@ -27,36 +27,45 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         echo $messageErreur;
         header ('location: /index.php?page=accueil');
     }
-
-
-    $requeteLogin="SELECT * FROM utilisateur WHERE username='".$username."' AND password='".$password."'";
+// Vérification du hashage du mot de passe pour se connecter
+    $password = $_POST['password'];
+    $requeteHash="SELECT * FROM utilisateur WHERE username='".$username."'";   
     $sqlLogin = new Sql();
-    $resultatLogin = $sqlLogin->afficher($requeteLogin);
-    $_SESSION["role"] = $resultatLogin[0]['role'];
-    if (count($resultatLogin) > 0) 
-    {
-        if($resultatLogin[0]['role']=="user")
-        { 
-            $_SESSION["username"] = $username; 
-            header('location: admin/index.php?page=espaceUser');
-        }
-        elseif($resultatLogin[0]['role']=="admin")
+    $requeteHash = $sqlLogin->afficher($requeteHash);
+
+   echo $hash = $requeteHash[0]['password'];
+    
+   if (password_verify($password, $hash)){ 
+        $requeteLogin="SELECT * FROM utilisateur WHERE username='".$username."' AND password='".$hash."'";
+        $sqlLogin = new Sql();
+        $resultatLogin = $sqlLogin->afficher($requeteLogin);
+      
+
+        $_SESSION["role"] = $resultatLogin[0]['role'];
+        if (count($resultatLogin) > 0) 
         {
-            $_SESSION["username"] = $username; 
-            header('Location: admin/index.php?page=accueil');
+            if($resultatLogin[0]['role']=="user")
+            { 
+                $_SESSION["username"] = $username; 
+                header('location: admin/index.php?page=espaceUser');
+            }
+            elseif($resultatLogin[0]['role']=="admin")
+            {
+                $_SESSION["username"] = $username; 
+                header('Location: admin/index.php?page=accueil');
+            }
+            else
+            {
+            echo  $message = "Erreur d'authentification";
+                $_SESSION['username'] = false;
+            }
+        }elseif(count($resultatLogin) == 0 ){
+        echo $message = "Erreur d'authentification";
+            $_SESSION["username"] = "";
+            session_destroy();
+            header ('location:http://localhost/newNormayna/index.php');
         }
-        else
-        {
-          echo  $message = "Erreur d'authentification";
-            $_SESSION['username'] = false;
-        }
-    }elseif(count($resultatLogin) == 0 ){
-       echo $message = "Erreur d'authentification";
-        $_SESSION["username"] = "";
-        session_destroy();
-        header ('location:http://localhost/newNormayna/index.php');
 
     }
-
 }
 ?>

@@ -62,7 +62,7 @@
          
             <div class="links">
                 <span>Mot de passe oublié? <a href="">Click ici</a></span>
-                <span>Vous n'avez pas de compte? <a href="">Créer un compte</a></span>
+                <span>Vous n'avez pas de compte? <a href="admin/index.php?page=frmAjoutUtilisateur">Créer un compte</a></span>
             </div>
             <input type="hidden" name="frmConnexion" />
         </form>

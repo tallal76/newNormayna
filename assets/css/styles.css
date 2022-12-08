@@ -1448,6 +1448,7 @@ img {
 
 .footer .col:first-child .logo {
     margin-bottom: 3rem;
+    justify-content: left;
 }
 
 .footer .col:first-child p {
@@ -1458,6 +1459,7 @@ img {
 
 .footer .col:first-child .icons {
     margin-bottom: 2rem;
+    justify-content: left;
 }
 
 .footer .icon {

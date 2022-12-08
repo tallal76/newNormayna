@@ -21,7 +21,7 @@ if (isset($_POST["frmUpdate"])) {
 
     $requete = 'SELECT * FROM evenements WHERE id_event = ' . $_GET['id'];
     $querySelect = new Sql();
-    $select = $querySelect->recup($requete);
+    $select = $querySelect->afficher($requete);
 
     $theme = $select[0]['theme_event'];
     $adresse = $select[0]['adress_event'];
