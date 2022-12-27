@@ -1,7 +1,7 @@
   <!--=============== Stats ===============-->
   <section class="section stats" id="stats">
     <div class="row container">
-        <h2><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i> Statistiques</h2> 
+        <h2><i class="fa-solid fa-square-poll-vertical fa-3x"></i> Statistiques</h2> 
         <div class="col">
             <div class="card">
                 <img src="../assets/images/icones/repas.png" alt="Produits">

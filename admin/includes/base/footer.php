@@ -1,7 +1,7 @@
 <div class="footer-bottom">
     <div class="row container d-flex">
         <div id="copyright">
-            <p>&copy; <?php echo date("Y"); ?> - YNM - Restaurant oriental</a>
+            <p>&copy; <?php echo date("Y"); ?> - NORMAYNA - Traiteur</a>
             </p>
         </div>
         <p>Créé par Sonia | Hamza</p>

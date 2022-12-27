@@ -9,7 +9,7 @@
         <ul class="navbar navbar__links nav-list d-flex">
             <li class="navbar__link"><a href="index.php?page=accueil">Accueil</a></li>
             <li class="navbar__link"><a href="index.php?page=carte">La carte</a></li>
-            <li class="navbar__link"><a href="index.php?page=evenement">Listes des Evenements</a></li>
+            <li class="navbar__link"><a href="index.php?page=evenement">Evenements</a></li>
           <!--  <li class="navbar__link"><a href="index.php?page=apropos">À propos</a></li>--> 
             
         <?php

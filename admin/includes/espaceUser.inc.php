@@ -109,6 +109,7 @@
   <?php 
 //=============== Gérer les actions : ajouter ou supprimer un item commande =================//
 $action_type = $_GET['action_type'];
+
 if($action_type=='add_item')
 {
 	$id_produit = $_GET['id_produit'];
@@ -133,10 +134,9 @@ if($action_type=='add_item')
 				if($_SESSION['cart'][$key]['id_produit']==$id_produit)
 				{
 					$_SESSION['cart'][$key]['quantite'] = $_SESSION['cart'][$key]['quantite'] + $quantite;
+         
 				}
-				
 			}
-			
 		}
 		else
 		{
@@ -158,7 +158,6 @@ if($action_type=='remove_item')
 		unset($_SESSION['cart'][$index]);
 		header("location:index.php?page=accueil");
 	}
-
 }
 ?>
 </section>
@@ -169,7 +168,8 @@ if($action_type=='remove_item')
   <div id="produitSelect" class="column right">
     <h2>Détail de ma commande</h2>
       <?php 
-      $Total=0;
+      $Total = 0;
+    
       if(isset($_SESSION['cart'])) { ?>
       <table class="ficheCommande table table-bordered">
           <thead>
@@ -183,8 +183,10 @@ if($action_type=='remove_item')
             <?php
             $index = 0;
             $i=1;
+            $totalQuantite=0;
             foreach($_SESSION['cart'] as $key => $val) {   
               $totalPrix = $val['quantite'] * $val['prix_produit'];
+              $totalQuantite += $val['quantite'];
               $Total = $Total + $totalPrix;
               ?>            
             <tr>
@@ -194,17 +196,27 @@ if($action_type=='remove_item')
                <td><?=number_format($totalPrix, 2, ',', ' ');?></td> 
                <td><a href="?page=espaceUser&action_type=remove_item&index=<?=$key?>"><i class="fa fa-trash" aria-hidden="true"></i> </a></td>
             </tr>
-          <?php $index++; } ?>
-          <?php $_SESSION['nbArticle'] = $index;  ?>
+          <?php 
+            $index++; 
+          } 
+          ?>
+          <?php $_SESSION['nbArticle'] = $index;   
+          $_SESSION['quantite'] = $totalQuantite;
+          ?>
           <tr>
             <td></td>
-            <td></td>
-            <td><b>Total</b></td>
-            <td><?=number_format($Total, 2, ',', ' ');?></td>
+            <td><b>TOTAL</b></td>
+            <td> 
+              <b>
+                <?php    
+                  echo $totalQuantite;
+                ?>
+              </b>
+            </td>
+            <td><b><?=number_format($Total, 2, ',', ' ');?></b></td>
             <td></td>
           </tr>
           </tbody>
-         
       </table>
     <?php } ?>
       <div class="btnCommande">
