@@ -46,12 +46,10 @@ if (isset($_POST['frmProduit'])) {
             $name = $_FILES['file']['name'];
             $size = $_FILES['file']['size'];
             $error = $_FILES['file']['error'];
-            //INSERT INTO `produits` (`Id`, `Titre`, `Prix`, `Url`, `Categorie`)
-            // VALUES (NULL, 'requete', '5', 'l00',( SELECT id_categorie from Categorie WHERE libelle ='Nos Plats'));
+         
             //trouve une solution pour recuperer la valeur de l'id selection de la liste
 
-            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie,description
-            )
+            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie,description)
             VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$t'),'$description');";
 
             $queryInsert = new Sql();

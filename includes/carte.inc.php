@@ -70,16 +70,16 @@
                  </div>
                  <div class="carte-content">
                      <div class="card-meta">
-                         <p class="dish-type"><?php echo $value['dataFilter_produit']; ?></p>
+                         <span class="dish-type"><?php echo $value['dataFilter_produit']; ?></span>
                              <ul class="dish-stats">
                                  <li>
-                                 <h5><span class="prix"><?php echo $value['prix_produit']; ?> €</span></h5>
+                                    <h3><span class=""><?php echo $value['prix_produit']; ?> €</span></h3>
                                  </li>
                                  <li>
                                      <a href="#">
                                      <i class="fa-solid fa-heart"></i>
                                      </a>
-                                     &nbsp;237
+                                     &nbsp;
                                  </li>
                              </ul>
                      </div>

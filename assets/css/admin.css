@@ -80,6 +80,60 @@ h4 {
  .alert-secondary{
     background-color: #D1E7DD 
  }
+ /* ========= Badge utilisateurs : admin ou user ========= */
+ ::selection{
+    background:
+  }
+  .badgeUser-icon, 
+  .badgeUser-text{
+    padding:1rem;
+    float:left;
+    -webkit-box-flex:1;
+    flex:1
+  }
+.badgeUser, .badgeAdmin{
+    display:flex;
+    margin-bottom: 1.2rem;
+    margin-right: 1.2rem;
+    color: var(--color-light);
+    min-width: var(--badge-size);
+    border-radius: 5px;
+    box-shadow: 0px 0px 60px var(--color-shade);
+    overflow: hidden;
+    border-style: solid;
+
+  }
+  
+  .badge-icon{
+   
+    background-size: contain;
+    max-width: calc( var(--badge-size) );
+    
+  }
+  .badge-text{
+    font: normal small-caps normal 16px/1.5 Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    padding: 8px;
+    flex-direction: row;
+    align-items: center;
+}
+.badgeUser-icon{
+    background-color: var(--badge-success-bg);
+    color: var(--white-color);
+    border-color: var(--badge-success-bg);
+}
+
+.badgeAdmin-icon{
+    
+    background-color: var(--badge-info-bg);
+    color: var(--white-color);
+    border-color:var(--badge-info-bg);
+    padding: 10px;
+}
+  
+  
+ 
 /* ========== tableaux crud ===== */
 
 .tbl-head

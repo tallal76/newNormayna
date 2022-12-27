@@ -4,8 +4,35 @@
             <div class="navbar__logo"><a href="index.php?page=accueil">
                 <img
                 src="../assets/images/logoN/favicon-logoBlanc/android-icon-192x192.png" alt="Normayna - traiteur - Oissel"></a>
-                <h3>
-                    Mon espace
+                <h3> 
+                <?php
+                    if($_SESSION['role'] =="user")
+                    {
+                    ?>
+                    <div class="mainBadgeUser">
+                    <div class="badgeUser" >
+                            <div class="badgeUser-icon">
+                                <span><i class="fa-solid fa-user fa-2x" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="badge-text">
+                                <span><b>Mon espace </b>personnel</span>
+                            </div>
+                        </div>  
+                    </div>
+                    <?php }elseif($_SESSION['role'] =="admin")
+                    {
+                    ?>
+                    <div class="mainBadgeUser">
+                        <div class="badgeAdmin" >
+                            <div class="badgeAdmin-icon">
+                                <span><i class="fa-solid fa-sliders fa-2x" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="badge-text">
+                            <span><b>Espace </b>Administrateur</span>
+                            </div>
+                        </div>  
+                    </div>
+                    <?php } ?>
                 </h3>
             </div>
             <ul class="navbar navbar__links nav-list d-flex">
@@ -25,20 +52,31 @@
             {?>
                 <li class="navbar__link"><a href="index.php?page=accueil">Accueil</a></li>
                 <li class="navbar__link"><a href="index.php?page=carte">La carte</a></li>
-                <li class="navbar__link"><a href="index.php?page=evenement">Listes des Evenements</a></li>
+                <li class="navbar__link"><a href="index.php?page=evenement">Liste des Evenements</a></li>
                 <li class="navbar__link"><a href="index.php?page=apropos">À propos</a></li>
                 <li class="navbar__link"><a href="index.php?page=commande">Commande</a></li> 
                     
             <?php
             }
             if (isset($_SESSION['username'])) 
-            {
-            ?> 
-                <span class="name"><i class="fa fa-user" aria-hidden="true"></i>  
+            {?>
+            <span class="name"><i class="fa fa-user" aria-hidden="true"></i>  
                 <?php echo $_SESSION["username"] ?></span>
-                <span class="panier">
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i> 20
-                </span>
+                          
+            <?php
+            if($_SESSION['role'] =="user")
+            {
+            ?>  
+            <span class="panier">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <?php          
+                if(isset($_SESSION['quantite']))
+                {
+                    echo $_SESSION['quantite'];
+                }
+                ?>
+            </span>
+            <?php }?>
                 <li class="navbar__link">
                     <a href="index.php?page=logout" class="btn signin">
                         <span><i class="fa fa-sign-out" aria-hidden="true"></i>Déconnexion

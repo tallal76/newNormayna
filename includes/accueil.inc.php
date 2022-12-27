@@ -32,7 +32,7 @@
                     <img src="./assets/images/repasOriental.png" alt="" />
 
                 </p>
-                <a href="#recipes" class="btn">Voir notre carte de menu</a>
+                <a href="index.php?page=carte" class="btn">Voir notre carte</a>
             </div>
             <div class="col">
                 <img src="./assets/images/commandeHome.png" alt="" />

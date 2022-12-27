@@ -43,11 +43,16 @@
     --badge-warning-bg: #f8e55b;
     --badge-danger-bg: #e74c3c;
     --badge-success-bg: #2ecc71;
-    --alert-primary:#CFE2FF;
-    --alert-warning:#FFF3CD;
-    --alert-danger:#F8D7DA;
-    --alert-success #D1E7DD 
-    --alert-danger-secondary: #D1E7DD;
+    --alert-primary: #CFE2FF;
+    --alert-warning: #FFF3CD;
+    --alert-danger: #F8D7DA;
+    --alert-success: #D1E7DD;
+    --alert-danger-secondary: #F8D7DA;
+/* badge user admin ou user */
+  --badge-size: 250px;
+  --lock-color: #fff;
+  --lock-width: 30px;
+  --lock-stroke: 2.5px;
 }
 
 *,
@@ -72,6 +77,7 @@ body {
     color: var(--default-color);
     margin: 0;
     min-height: 100vh;
+    background-color: var(--white-color);
 }
 
 h1,
